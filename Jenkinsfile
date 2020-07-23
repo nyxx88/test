@@ -49,7 +49,7 @@ pipeline {
                          args '--entrypoint=' }
                        }
         steps {
-           withAWS(credentials: 'awscreds', region: 'us-east-1'){
+           withAWS(credentials: 'awscred', region: 'ap-southeast-1'){
                
              sh "terraform init --upgrade && terraform plan"
             
