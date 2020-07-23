@@ -49,7 +49,8 @@ pipeline {
                          args '--entrypoint=' }
                        }
         steps {
-           withAWS(credentials: 'awscred', region: 'ap-southeast-1'){
+           //withAWS(credentials: 'awscred', region: 'ap-southeast-1'){
+           withAWS(credentials: 'awscred', region: 'us-east-1'){
                
              sh "terraform init --upgrade && terraform plan"
             
@@ -71,7 +72,8 @@ pipeline {
                          args '--entrypoint=' }
                        }
         steps {
-          withAWS(credentials: 'awscred', region: 'ap-southeast-1'){
+          //withAWS(credentials: 'awscred', region: 'ap-southeast-1'){
+          withAWS(credentials: 'awscred', region: 'us-east-1'){
              
              sh "terraform apply --auto-approve"
             
