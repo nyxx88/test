@@ -4,4 +4,5 @@ resource "aws_instance" "myVM" {
 
   tags = {
     my_name = "myVM"
+  }
 }
